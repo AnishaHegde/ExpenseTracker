@@ -1,0 +1,39 @@
+<div class="login-page">
+	<div class="container">
+		<h3 class="tittle">login</h3>
+		<div class="col-md-12">
+			<div class="about_img">
+				<form>
+				  <div class="form-group input-group-lg">
+				    <label for="email">Email address:</label>
+				    <input ng-model="email" type="email" class="form-control" placeholder="Email" aria-describedby="sizing-addon1" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+				  </div>
+				  <div class="form-group input-group-lg">
+				    <label for="pwd">Password:</label>
+				    <input ng-model="pwd" type="password" class="form-control" placeholder="Password" aria-describedby="sizing-addon1">
+				  </div>
+
+				  <div class="form-group input-group-lg" id="userType" align="center">
+				    <label class="radio-inline">
+			      		<input type="radio" name="optradio" ng-click="enableSubmit()" ng-model="uType" value="regularUser">User</label>
+					<label class="radio-inline">
+						<input type="radio" name="optradio" ng-click="enableSubmit()" ng-model="uType" value="admin">Admin</label>
+				  </div>
+
+				  <div class="form-group" align="center">
+					<div class="col-sm-offset-2 col-sm-8">
+					    <div class="alert alert-danger" ng-hide="invalid_login">
+							<strong>Incorrect username or password</strong>
+						</div>
+
+						<button type="reset" ng-click="disableSubmit()" class="btn btn-default btn-lg" style="background-color: #0b9194; color: white;width: 200px;">Cancel</button>
+				        <button type="submit" ng-disabled="typeChecked" ng-click="login()" id="login" class="btn btn-default btn-lg" style="background-color: #0b9194; color: white; width: 200px;">Login</button>
+				    </div>
+
+				    <label class="sign" style="margin-top: 10px;">Do not have an account ? <a href="#!register" style="color: #aaa">Sign Up</a></label>
+				  </div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

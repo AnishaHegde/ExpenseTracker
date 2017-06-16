@@ -1,0 +1,16 @@
+{
+  "name": "ExpenseTracker",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "client-sessions": "^0.8.0",
+    "cookie-parser": "^1.4.3",
+    "ejs": "*",
+    "express": "3.2.6",
+    "express-session": "^1.15.3"
+  }
+}

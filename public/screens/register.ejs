@@ -1,0 +1,42 @@
+<div class="register-page">
+	<div class="container">
+		<h3 class="tittle">register</h3>
+		<div class="col-md-12">
+			<div class="about_img">
+				<form>
+				  <div class="form-group input-group-lg">
+				    <label for="email">Email address:</label>
+				    <input id="email" ng-model="email" type="email" class="form-control" placeholder="Email" aria-describedby="sizing-addon1" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+				  </div>
+				  <div class="form-group input-group-lg">
+				    <label for="pwd">Password:</label>
+				    <input id="pwd" ng-model="pwd" type="password" class="form-control" placeholder="Password" aria-describedby="sizing-addon1">
+				  </div>
+
+				  <div class="form-group input-group-lg">
+				    <label for="pwd">Re-enter Password:</label>
+				    <input id="repwd" ng-model="repwd" type="password" class="form-control" placeholder="Confirm Password" aria-describedby="sizing-addon1">
+				  </div>
+
+				  <div class="form-group" align="center">
+				    <div class="col-sm-offset-2 col-sm-8">
+					    <div class="alert alert-danger" ng-hide="invalid_password">
+								<strong>Passwords do not match</strong>
+						</div>
+						<div class="alert alert-danger" ng-hide="invalid_email">
+								<strong>Please enter valid email</strong>
+						</div>
+						<div class="alert alert-danger" ng-hide="user_exists">
+								<strong>User already exists</strong>
+						</div>
+				        <button type="reset" ng-click="reset()" class="btn btn-default btn-lg" style="background-color: #0b9194; color: white;width: 200px;">Cancel</button>
+				        <button type="submit" ng-click="register()" id="register" class="btn btn-default btn-lg" style="background-color: #0b9194; color: white; width: 200px;">Register</button>
+				        <br>
+				        <label class="sign" style="margin-top: 10px;">Already registered ? <a href="#!" style="color: #aaa">Login</a></label>
+				    </div>
+				  </div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

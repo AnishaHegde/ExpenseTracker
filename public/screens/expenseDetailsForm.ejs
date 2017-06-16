@@ -1,0 +1,60 @@
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navcol-1">
+            <ul class="nav navbar-nav" style="float:left; color:black">
+                <li style="text-decoration: underline; font-weight:bold"><a href="#!/createExpense">Create Expense</a></li>
+                <li><a href="#!/expenseProfile">Expenses</a></li>
+                <li><a href="#!/report">Report </a></li>
+            </ul>
+            <button class="btn btn-info navbar-btn navbar-right" type="button" style="font-weight: bold; background-color: #0b9194" ng-click="logout()">Log Out</button>
+        </div>
+    </div>
+</nav>
+<br><br>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <form role="form">
+
+            <h2 align="center">{{userOperation}} your Expense</h2>
+            <br/><br/>
+                <div class="form-group">
+                    <label for="amount">Amount</label>
+                    <input class="form-control input-md" type="text" id="amount" ng-model="amount" style="width:100%;" placeholder="Enter Amount"/>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea class="form-control" id="description" rows="5" ng-model="description" style="width:100%;" placeholder="Enter details of the transaction"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <p class="input-group">
+                        <input type="text" class="form-control input-md" uib-datepicker-popup="{{format}}"
+                               ng-model="date" is-open="popup.opened"
+                               datepicker-options="dateOptions"
+                               ng-required="true" close-text="Close"/>
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-info btn-md" ng-click="open()">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                            </button>
+                        </span>
+                    </p>
+                </div>
+
+                <button type="reset" class="btn btn-default" style="background-color: #0b9194; color: white;">Cancel</button>
+                <button type="submit" class="btn btn-default" style="background-color: #0b9194; color: white;" ng-click="submitOp()">{{userOperation}}</button>
+
+            </form>
+        </div>
+    </div>
+</div>

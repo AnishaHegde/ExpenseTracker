@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="expenseTrackerApp">
+<head>
+	<title>Expense Tracker</title>
+	<!-- for-mobile-apps -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<!-- //for-mobile-apps -->
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- fonts -->
+	<link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<!-- //fonts -->
+</head>
+
+<body ng-controller="expenseTrackerController">
+	<!-- banner -->
+	<div class="banner page-head">
+		<div class="container">
+			<div class="header-nav">
+				<nav class="navbar navbar-default">
+					<div class="navbar-header logo">
+						<h1>
+							<a class="navbar-brand" href="/"><span>E</span><i>XPENSE</i><span>T</span><i>RACKER</i></a>
+						</h1>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<!-- //banner -->
+
+	<div id="main">
+	    <div ng-view></div>
+	</div>
+
+	<!-- Bootstrap -->
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+
+	<!-- Angular -->
+	<script src="angular/angular.min.js"></script>
+	<script src="angular/angular-route.min.js"></script>
+	<script src="angular/controller.js"></script>
+
+	<!--Date time picker-->
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
+	<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+
+</body>
+
+</html>
