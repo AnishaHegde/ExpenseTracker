@@ -6,7 +6,7 @@ var pool = mysql.createPool({
 	  connectionLimit : 1000,
 	  host            : 'localhost',
 	  user            : 'root',
-	  password        : 'root',
+	  password        : '',
 	  database		  :	'expensetrackerdb',
 	  port			  :  3306
 	});
